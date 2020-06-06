@@ -1,5 +1,30 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<div style="padding: 30px; background-color:aliceblue">
+  <ul>
+    <li>
+      <LinkTo @route="application">
+        Application
+      </LinkTo>
+      <ul>
+        <li>
+          <LinkTo @route="some">
+            Some
+          </LinkTo>
+          <ul>
+            <li>
+              <LinkTo @route="some.nested">
+                Nested
+              </LinkTo>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<div style="background-color: red; padding: 20px;">
+  <h1>
+    Application
+  </h1>
+  <TestImage />
+  {{outlet}}
+</div>
