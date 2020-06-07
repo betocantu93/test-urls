@@ -1,0 +1,17 @@
+<div style="display: flex; margin-top: 80px;">
+  <div style="flex: 1;">
+    <ul>
+      {{#each @model as |team|}}
+        <li>
+          <img src="/assets/images/teams/{{team.short_name}}.png" alt="{{team.name}}'s flag" style="width: 50px;">
+          <LinkTo @route="teams.team" @model={{team.id}}>
+            {{team.name}}
+          </LinkTo>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+  <div style="flex: 1;">
+    {{outlet}}
+  </div>
+</div>

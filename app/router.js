@@ -7,7 +7,7 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function() {
-  this.route('some', function() {
-    this.route('nested')
+  this.route('teams', function() {
+    this.route('team', { path: ':id'})
   })
 });
